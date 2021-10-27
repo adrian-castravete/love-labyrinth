@@ -1,13 +1,14 @@
-local worldgen = require "worldgen"
+local World = require "worldgen"
 
 local overworld = nil
 
 function start()
-	overworld = worldgen.generate("assets/moon.png", 1)
-	
+	overworld = World("assets/moon.png", 1)
+
 end
 
 function update(dt)
+	overworld:update(dt)
 end
 
 function pressed(btn)
